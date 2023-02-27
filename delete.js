@@ -88,12 +88,18 @@ function saveToLocalStorage(event){
     event.preventDefault();
     var name=event.target.username.value;
     localStorage.setItem('name',name);
+    const obj={
+      name,
+}
+
+
+    localStorage.setItem('userdetails',JSON.stringify(obj));
 
 }
 
 
 
-// 
+//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 
 
