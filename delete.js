@@ -9,6 +9,11 @@ form.addEventListener('submit', additem);
 //delete event
 itemList.addEventListener('click', removeItem);
 
+
+//add edit
+
+// itemList.addEventListener('click',edititem);
+
 //filter event
 
 filter.addEventListener('keyup', filterItems)
@@ -45,11 +50,26 @@ function additem(e) {
     li.appendChild(deleteBtn);
 
 
-    itemList.appendChild(li);
+   
+    
+
+ //create edit buuton
+ var editBtn = document.createElement('button');
+
+ //add class to delete button
+ editBtn.className = 'btn btn-success btn-sm float-right edit';
+
+ //appendTextnode
+ editBtn.appendChild(document.createTextNode('✔'));
+
+ //append button to li
+     li.appendChild(editBtn);
+
+
+     itemList.appendChild(li);
+   
 
 }
-
-
 
 //remove item
 function removeItem(e) {
@@ -60,6 +80,32 @@ function removeItem(e) {
         }
     }
 }
+
+
+//save local storage
+
+function saveToLocalStorage(event){
+    event.preventDefault();
+    var name=event.target.username.value;
+    localStorage.setItem('name',name);
+
+}
+
+
+
+// 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
